@@ -1,17 +1,27 @@
 {
   "name": "airtunes",
   "version": "0.1.0",
+  "description": "Play music the way you wan't.",
+  "main": "public/electron.js",
+  "homepage": "./",
   "private": true,
   "dependencies": {
+    "electron-is-dev": "^1.0.1",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-scripts": "2.1.5"
   },
+  "build": {
+    "appId": "com.example.shamaran85.airtunes"
+  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "react-start": "react-scripts start",
+    "react-build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "electron-build": "electron-builder",
+    "build": "npm run react-build && npm run electron-build",
+    "start": "concurrently \"SET BROWSER=none&&npm run react-start\" \"wait-on http://localhost:3000 && electron .\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,5 +31,11 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "electron": "^4.0.5",
+    "electron-builder": "^20.38.5",
+    "wait-on": "^3.2.0"
+  }
 }
