@@ -44,6 +44,7 @@ class Playlist extends Component {
 
     render() {
         const renderPlaylist = this.state.playlist.map((track, index) => {
+            console.log(track);
             return (
                 <li
                     className="playlist__track"
@@ -58,7 +59,7 @@ class Playlist extends Component {
         });
 
         return (
-            <div className="playlist__container__inner" >
+            <div className="playlist__container__inner">
                 <ul className="playlist">{renderPlaylist}</ul>
             </div>
         );
