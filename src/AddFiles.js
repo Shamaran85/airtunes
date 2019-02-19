@@ -121,9 +121,8 @@ class AddFiles extends Component {
     render() {
         return (
             <div>
-                <p>Add Files</p>
-                <button onClick={() => this.browseFolders()}>Add Folder</button>
-            </div >
+                <button onClick={() => this.browseFolders()}>Add Files</button>
+            </div>
         );
     }
 }

@@ -6,9 +6,87 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+  box-sizing: border-box;
+  overflow: hidden;  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ddd;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #666;
+}
+
+.container {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  height: 535px;
+}
+
+.player__container {
+  height: 30%;
+  background-color: #5c4737;
+  color: #fff;
+}
+
+.playlist__container {
+  height: 70%;
+}
+
+.playlist__container__inner {
+  margin: 0;
+  height: 493px;
+  overflow-y: scroll;
+}
+
+.playlist {
+  list-style-type: none;
+  margin: 0;
+  padding: 15px;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.playlist__track {
+  display: flex;
+  cursor: default;
+  padding: 12px 25px;
+  color: #000;
+}
+
+.playlist__track__index {
+  flex: 0 1 8%;
+}
+
+.playlist__track__title {
+  flex: 0 1 40%;
+}
+
+.playlist__track__artist {
+  flex: 0 1 40%;
+}
+
+.playlist__track__duration {
+  flex: 0 1 12%;
+  text-align: right;
+}
+
+.playlist__track:nth-child(odd) {
+  background-color: #eee;
+}
+
+.playlist__track:hover {
+  background-color: #b9b9b9;
 }
