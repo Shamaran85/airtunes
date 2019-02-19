@@ -41,7 +41,6 @@ class Playlist extends Component {
         }
     }
 
-
     render() {
         const renderPlaylist = this.state.playlist.map((track, index) => {
             console.log(track);
