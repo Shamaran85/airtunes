@@ -45,6 +45,11 @@ code {
   height: 70%;
 }
 
+.playlist__container__add-files {
+  margin: 10px 20px;
+  text-align: right
+}
+
 .playlist__container__inner {
   margin: 0;
   height: 493px;

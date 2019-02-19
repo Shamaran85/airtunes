@@ -120,7 +120,7 @@ class AddFiles extends Component {
 
     render() {
         return (
-            <div>
+            <div className="playlist__container__add-files">
                 <button onClick={() => this.browseFolders()}>Add Files</button>
             </div>
         );
