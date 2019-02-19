@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import AddFiles from './AddFiles';
+import Playlist from './Playlist';
 
 class App extends Component {
   render() {
@@ -8,6 +9,7 @@ class App extends Component {
       <div>
         <p>AirTunes</p>
         <AddFiles />
+        <Playlist />
       </div>
     );
   }
