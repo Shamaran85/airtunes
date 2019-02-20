@@ -41,6 +41,10 @@ class Playlist extends Component {
         }
     }
 
+    handleTrack(track) {
+        const currentTrack = track.path;
+        this.setState({ track: currentTrack });
+    }
 
     render() {
         const renderPlaylist = this.state.playlist.map((track, index) => {
@@ -49,6 +53,7 @@ class Playlist extends Component {
                 <li
                     className="playlist__track"
                     key={index}
+                    onClick={e => this.handleTrack(track)}
                 >
                     <div className="playlist__track__index">{index + 1}.</div>
                     <div className="playlist__track__title">{track.title}</div>
