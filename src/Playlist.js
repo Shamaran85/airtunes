@@ -41,17 +41,14 @@ class Playlist extends Component {
         }
     }
 
-<<<<<<< HEAD
-=======
     handleTrack(track) {
         const currentTrack = track.path;
         this.setState({ track: currentTrack });
     }
 
->>>>>>> cc8d336dffb62e3b0fb9e9cd8f0baaf593224e17
     render() {
+        console.log(this.state.track);
         const renderPlaylist = this.state.playlist.map((track, index) => {
-            console.log(track);
             return (
                 <li
                     className="playlist__track"
