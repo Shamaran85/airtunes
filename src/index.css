@@ -39,14 +39,23 @@ code {
   height: 30%;
   background-color: #5c4737;
   color: #fff;
+  display: flex;
+  flex-direction: row;
 }
 
 .playlist__container {
-  height: 70%;
+    height: 70%;   
+}
+
+.player__container__left {
+  flex: 2 0 0;
+}
+
+.player__container__right {
+  flex: 5 0 0;
 }
 
 .playlist__container__add-files {
-  margin: 10px 20px;
   text-align: right
 }
 
@@ -94,4 +103,9 @@ code {
 
 .playlist__track:hover {
   background-color: #b9b9b9;
+}
+
+audio {
+  background-color: #5c4737;
+  margin-bottom: 50px;
 }
